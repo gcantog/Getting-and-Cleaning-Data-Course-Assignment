@@ -4,23 +4,23 @@ Cleaning Data Assignment
 Description of the Variables:
 =========================================
 
-subject_train = read.table("subject_train.txt")
+				subject_train = read.table("subject_train.txt")
 
-subject_test = read.table("subject_test.txt")
+				subject_test = read.table("subject_test.txt")
 
-X_train = read.table("X_train.txt")
+				X_train = read.table("X_train.txt")
 
-X_test = read.table("X_test.txt")
+				X_test = read.table("X_test.txt")
 
-Y_train = read.table("y_train.txt")
+				Y_train = read.table("y_train.txt")
 
-Y_test = read.table("y_test.txt")
+				Y_test = read.table("y_test.txt")
 
-features = read.table("features.txt",stringsAsFactors=FALSE)
+				features = read.table("features.txt",stringsAsFactors=FALSE)
 
-features2 = features[,2]
+				features2 = features[,2]
 
-activity = read.table("activity_labels.txt")
+				activity = read.table("activity_labels.txt")
 
  ##features reads the table'features.txt' which contains a List of all features.
 
