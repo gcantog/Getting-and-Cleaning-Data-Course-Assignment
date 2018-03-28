@@ -35,9 +35,39 @@ Description of the Variables:
  	##y_test:reads the table 'test/y_test.txt'which contains Test labels.
 
 	 ##subject train and subject trainn read the table 'train/subject_train.txt'respectively: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+	 
 
 				Y<- rbind(Y_train,Y_test)
 				subject <- rbind(subject_train,subject_test)
 				X<- rbind(X_train,X_test)	
-## I merges the training and the test sets to create one data set.
-	##
+				
+	## I merge the training and the test sets to create one data set.
+	
+				act= left_join(Y,activity, 'V1')
+	## I give names to the activities
+	
+				dataset = as.data.frame(cbind(subject,act[,2],X))
+	## I put evertything underone dataset
+	
+				colnames(dataset) <- c("Subject","Activity", features2)
+				st=grep("std\\(\\)", names(dataset), value=TRUE)
+				me=grep("mean\\(\\)", names(dataset), value=TRUE)
+				stme=c("Subject","Activity",st,me)
+				trimmed = dataset[,stme]
+	## I rename the columns and select the ones for std and mean only
+	
+				label<-gsub("^t","time",names(trimmed))
+				label2<-gsub("^f","freq",label)
+				label3<-gsub("Acc","Accelerometer",label2)
+				label4<-gsub("BodyBody","Body",label3)
+				colnames(trimmed) <- c(label4)
+	## I relabel the columns to show proper names
+				
+				final=trimmed%>% 
+        			group_by(Subject,Activity)%>%
+       				 summarise_all(mean)
+				final
+	## I group the data set by Subject & Activity and summarize all calculating the average by Subject by Activity.
+	
+				
+	
