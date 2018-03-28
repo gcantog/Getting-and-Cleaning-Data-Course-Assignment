@@ -22,19 +22,22 @@ Description of the Variables:
 
 				activity = read.table("activity_labels.txt")
 
- ##features reads the table'features.txt' which contains a List of all features.
+ 	##features reads the table'features.txt' which contains a List of all features.
 
- ##activity: reads the table 'activity_labels.txt'which Links the class labels with their activity name.
+	 ##activity: reads the table 'activity_labels.txt'which Links the class labels with their activity name.
 
- ##xtrain: reads the table 'train/X_train.txt' which contains Training set.
+ 	##xtrain: reads the table 'train/X_train.txt' which contains Training set.
 
- ##ytrain: reads the table'train/y_train.txt' which contains Training labels.
+ 	##ytrain: reads the table'train/y_train.txt' which contains Training labels.
 
- ##xtest:reads the table 'test/X_test.txt'which contains Test set.
+	 ##xtest:reads the table 'test/X_test.txt'which contains Test set.
 
- ##y_test:reads the table 'test/y_test.txt'which contains Test labels.
+ 	##y_test:reads the table 'test/y_test.txt'which contains Test labels.
 
- ##subject train and subject trainn read the table 'train/subject_train.txt'respectively: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+	 ##subject train and subject trainn read the table 'train/subject_train.txt'respectively: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-
-
+				Y<- rbind(Y_train,Y_test)
+				subject <- rbind(subject_train,subject_test)
+				X<- rbind(X_train,X_test)	
+## I merges the training and the test sets to create one data set.
+	##
