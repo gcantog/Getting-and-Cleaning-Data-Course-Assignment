@@ -41,7 +41,7 @@ Description of the Variables and Script:
 	## I give names to the activities
 	
 				dataset = as.data.frame(cbind(subject,act[,2],X))
-	## I put evertything underone dataset
+	## I put evertything under one dataset
 	
 				colnames(dataset) <- c("Subject","Activity", features2)
 				st=grep("std\\(\\)", names(dataset), value=TRUE)
