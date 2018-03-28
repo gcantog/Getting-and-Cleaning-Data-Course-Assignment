@@ -34,7 +34,6 @@ Description of the Variables and Script:
 				Y<- rbind(Y_train,Y_test)
 				subject <- rbind(subject_train,subject_test)
 				X<- rbind(X_train,X_test)	
-				
 	## I merge the training and the test sets to create one data set.
 	
 				act= left_join(Y,activity, 'V1')
