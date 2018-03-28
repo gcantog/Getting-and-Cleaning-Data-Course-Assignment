@@ -1,7 +1,7 @@
 # Getting-and-Cleaning-Data-Course-Assignment
 Cleaning Data Assignment
 
-Description of the Variables:
+Description of the Variables and Script:
 =========================================
 
 				subject_train = read.table("subject_train.txt")
@@ -23,17 +23,11 @@ Description of the Variables:
 				activity = read.table("activity_labels.txt")
 
  	##features reads the table'features.txt' which contains a List of all features.
-
 	 ##activity: reads the table 'activity_labels.txt'which Links the class labels with their activity name.
-
  	##xtrain: reads the table 'train/X_train.txt' which contains Training set.
-
  	##ytrain: reads the table'train/y_train.txt' which contains Training labels.
-
 	 ##xtest:reads the table 'test/X_test.txt'which contains Test set.
-
  	##y_test:reads the table 'test/y_test.txt'which contains Test labels.
-
 	 ##subject train and subject trainn read the table 'train/subject_train.txt'respectively: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 	 
 
