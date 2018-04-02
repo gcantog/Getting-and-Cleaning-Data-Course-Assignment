@@ -34,8 +34,6 @@ label3<-gsub("Acc","Accelerometer",label2)
 label4<-gsub("BodyBody","Body",label3)
 label5<-gsub("[-()]"," ",label4)
 
-
-
 colnames(trimmed) <- c(label5)
 
 final=trimmed%>% 
