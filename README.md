@@ -1,7 +1,11 @@
 Description of the script:
 =========================================
 
-There are 2 sets of data in the beginning, the "test" data and the "train" data with 3 files each of them (2X3= 6 files). There is aso a file called "features" that needs to be read into R as it is containing our future dataset columns. Also there is a file called "activity_labels.txt" with the list of activities. The first step is to read all of them into R:
+There are 2 sets of data in the beginning, the "test" data and the "train" data with 3 files each of them (2X3= 6 files). There is aso a file called "features" that needs to be read into R as it is containing our future dataset columns. Also there is a file called "activity_labels.txt" with the list of activities. 
+
+The purpose of this project is to demonstrate my ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis.
+
+The first step is to read all of them into R:
 
 				subject_train = read.table("subject_train.txt")
 
