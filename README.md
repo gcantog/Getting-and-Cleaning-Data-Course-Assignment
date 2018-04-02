@@ -67,7 +67,8 @@ The next bit of code will relabel some of the  columns in order to show proper n
 				label2<-gsub("^f","freq",label)
 				label3<-gsub("Acc","Accelerometer",label2)
 				label4<-gsub("BodyBody","Body",label3)
-				colnames(trimmed) <- c(label4)
+				label5<-gsub("[-()]"," ",label4)
+				colnames(trimmed) <- c(label5)
 	
 As a last step, I group the data set by Subject & Activity and summarize all calculating the average by Subject by Activity. This will give me a single figure (average) per subject per activity
 
