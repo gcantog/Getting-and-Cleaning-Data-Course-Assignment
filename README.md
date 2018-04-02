@@ -36,18 +36,22 @@ The second step is to merge the datasets "train" and "test" X,Y and Subject file
 				X<- rbind(X_train,X_test)	
 
 The "Y" set of data is showing the activities, now I need to put them a name that is shown under "activity" with the left_join function of the dplyr package:
- 				install.packages("dplyr")
+
+				install.packages("dplyr")
 				require(dplyr) ## this will install the package and load it
 				act= left_join(Y,activity, 'V1')
 	## This give names to the activities
 
 The next step is to merge all the data, X,act(which in the second column is showing Y with names) and subject.I put evertything under one dataset, for that  I merge the training and the test sets to create one data set.
+
 				dataset = as.data.frame(cbind(subject,act[,2],X))
 		
-Now I need name the fit two columns stating what they represent and add the rest of the column names loaded under "features2" 	
+Now I need name the fit two columns stating what they represent and add the rest of the column names loaded under "features2" 
+
 				colnames(dataset) <- c("Subject","Activity", features2)
 				
-I need to select only the columns containing std() and mean(). The folowing set of code is what does that:			
+I need to select only the columns containing std() and mean(). The folowing set of code is what does that:
+
 				st=grep("std\\(\\)", names(dataset), value=TRUE)
 				me=grep("mean\\(\\)", names(dataset), value=TRUE)
 				stme=c("Subject","Activity",st,me)
@@ -61,13 +65,15 @@ The next bit of code will relabel some of the  columns in order to show proper n
 				label4<-gsub("BodyBody","Body",label3)
 				colnames(trimmed) <- c(label4)
 	
-As a last step, I group the data set by Subject & Activity and summarize all calculating the average by Subject by Activity. This will give me a single figure (average) per subject per activity				
+As a last step, I group the data set by Subject & Activity and summarize all calculating the average by Subject by Activity. This will give me a single figure (average) per subject per activity
+
 				final=trimmed%>% 
         			group_by(Subject,Activity)%>%
        				 summarise_all(mean)
 				final
 				
-In order to load the final data, I upload my data set as a txt file created with write.table() using row.name=FALSE				
+In order to load the final data, I upload my data set as a txt file created with write.table() using row.name=FALSE
+
 				write.table(final,row.name=FALSE)
 
 	
