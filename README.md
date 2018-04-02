@@ -1,4 +1,4 @@
-Description of the Variables and Script:
+Description of the script:
 =========================================
 
 
