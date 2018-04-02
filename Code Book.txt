@@ -1,45 +1,51 @@
-The dataset includes the following files:
+The dataset includes the following variables:
 =========================================
 
-- 'README.txt'
+The clean data set contain 68 columns named:
 
-- 'features_info.txt': Shows information about the variables used on the feature vector.
+[1] "Subject"                            "Activity"                          
+ [3] "timeBodyAccelerometerstd()X"        "timeBodyAccelerometerstd()Y"       
+ [5] "timeBodyAccelerometerstd()Z"        "timeGravityAccelerometerstd()X"    
+ [7] "timeGravityAccelerometerstd()Y"     "timeGravityAccelerometerstd()Z"    
+ [9] "timeBodyAccelerometerJerkstd()X"    "timeBodyAccelerometerJerkstd()Y"   
+[11] "timeBodyAccelerometerJerkstd()Z"    "timeBodyGyrostd()X"                
+[13] "timeBodyGyrostd()Y"                 "timeBodyGyrostd()Z"                
+[15] "timeBodyGyroJerkstd()X"             "timeBodyGyroJerkstd()Y"            
+[17] "timeBodyGyroJerkstd()Z"             "timeBodyAccelerometerMagstd()"     
+[19] "timeGravityAccelerometerMagstd()"   "timeBodyAccelerometerJerkMagstd()" 
+[21] "timeBodyGyroMagstd()"               "timeBodyGyroJerkMagstd()"          
+[23] "freqBodyAccelerometerstd()X"        "freqBodyAccelerometerstd()Y"       
+[25] "freqBodyAccelerometerstd()Z"        "freqBodyAccelerometerJerkstd()X"   
+[27] "freqBodyAccelerometerJerkstd()Y"    "freqBodyAccelerometerJerkstd()Z"   
+[29] "freqBodyGyrostd()X"                 "freqBodyGyrostd()Y"                
+[31] "freqBodyGyrostd()Z"                 "freqBodyAccelerometerMagstd()"     
+[33] "freqBodyAccelerometerJerkMagstd()"  "freqBodyGyroMagstd()"              
+[35] "freqBodyGyroJerkMagstd()"           "timeBodyAccelerometermean()X"      
+[37] "timeBodyAccelerometermean()Y"       "timeBodyAccelerometermean()Z"      
+[39] "timeGravityAccelerometermean()X"    "timeGravityAccelerometermean()Y"   
+[41] "timeGravityAccelerometermean()Z"    "timeBodyAccelerometerJerkmean()X"  
+[43] "timeBodyAccelerometerJerkmean()Y"   "timeBodyAccelerometerJerkmean()Z"  
+[45] "timeBodyGyromean()X"                "timeBodyGyromean()Y"               
+[47] "timeBodyGyromean()Z"                "timeBodyGyroJerkmean()X"           
+[49] "timeBodyGyroJerkmean()Y"            "timeBodyGyroJerkmean()Z"           
+[51] "timeBodyAccelerometerMagmean()"     "timeGravityAccelerometerMagmean()" 
+[53] "timeBodyAccelerometerJerkMagmean()" "timeBodyGyroMagmean()"             
+[55] "timeBodyGyroJerkMagmean()"          "freqBodyAccelerometermean()X"      
+[57] "freqBodyAccelerometermean()Y"       "freqBodyAccelerometermean()Z"      
+[59] "freqBodyAccelerometerJerkmean()X"   "freqBodyAccelerometerJerkmean()Y"  
+[61] "freqBodyAccelerometerJerkmean()Z"   "freqBodyGyromean()X"               
+[63] "freqBodyGyromean()Y"                "freqBodyGyromean()Z"               
+[65] "freqBodyAccelerometerMagmean()"     "freqBodyAccelerometerJerkMagmean()"
+[67] "freqBodyGyroMagmean()"              "freqBodyGyroJerkMagmean()" 
 
-- 'features.txt': List of all features.
+There are 30 Subjects and 6 different activities per subjetc: 30 x 6 = 180 rows
 
-- 'activity_labels.txt': Links the class labels with their activity name.
+the activities are: 
+1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING
 
-- 'train/X_train.txt': Training set.
-
-- 'train/y_train.txt': Training labels.
-
-- 'test/X_test.txt': Test set.
-
-- 'test/y_test.txt': Test labels.
-
-The following files are available for the train and test data. Their descriptions are equivalent. 
-
-- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-
-- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
-
-- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
-
-- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
-
-Notes: 
-======
-- Features are normalized and bounded within [-1,1].
-- Each feature vector is a row on the text file.
-
-For more information about this dataset contact: activityrecognition@smartlab.ws
-
-License:
-========
-Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
-
-[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
-
-This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
-
-Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
+Therefore,the final dataset is a 180 rows x 68 columns dataset
