@@ -48,4 +48,4 @@ the activities are:
 5 STANDING
 6 LAYING
 
-Therefore,the final dataset is a 180 rows x 68 columns dataset
+Therefore,the final dataset is a 180 rows x 68 columns dataset which shows the mean of all the activities performed by each single subject
