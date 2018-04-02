@@ -1,8 +1,6 @@
-# Getting-and-Cleaning-Data-Course-Assignment
-Cleaning Data Assignment
-
 Description of the Variables and Script:
 =========================================
+
 
 				subject_train = read.table("subject_train.txt")
 
